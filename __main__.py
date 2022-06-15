@@ -4,6 +4,8 @@ import glass_stepping_stones.game as r3
 from participant import computer as com
 from participant import my_own_player as player
 
+# For Test_1
+
 def report(winner, team, game):
     with open('result_term_project.csv', 'a') as f:  # the file name may change
         # team_num, game, win, defeat, violation, error
