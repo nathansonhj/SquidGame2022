@@ -2,6 +2,8 @@ import copy
 import random
 import time
 import numpy as np
+import matplotlib
+matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 
