@@ -71,34 +71,9 @@ class my_own_player(part.Participant):
 
     # ================================================================================= for tug_of_war game
     def gathering_members(self):
-        # you can override this method in this sub-class
-        # this method gathers your members for the tug of war game
-        # you only can change the configuration of the numbers of person types
-        # there are 4 types of persons
-        # type1 corresponds a ordinary person who has standard stats for the game
-        # type2 corresponds a person with great height
-        # type3 corresponds a person with a lot of weight
-        # type4 corresponds a person with strong power
-        # the return should be a tuple with size of 4, and the sum of the elements should be 10
-        # only for computer, it is allowed to set 12 members
-        return (0, 0, 5, 5)
+
+        return (0, 0, 10, 0)
 
     def act_tugging_strategy(self, playground_tug_of_war):
-        # you can override this method in this sub-class
-        # you can refer to an object of 'tug_of_war', named as 'playground_tug_of_war'
-        # the return should be a float value in [0, 100]!
-        # note that the float represents a stamina-consuming rate for tugging
-        if playground_tug_of_war.player_condition['Computer'] == False:
-            if playground_tug_of_war.player_expression[self.name] in ['best', 'well']:
-                return 15
-            else:
-                return 10
-        else:
-            if playground_tug_of_war.player_expression['Computer'] in ['best', 'well']:
-                return 0
-            else:
-                if playground_tug_of_war.player_expression[self.name] in ['best', 'well']:
-                    return 30 + random.randint(0, 3)
-                else:
-                    return random.randint(0, 3)
+        return 0
     # ================================================================================= for tug_of_war game
